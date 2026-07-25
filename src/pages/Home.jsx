@@ -5,7 +5,7 @@ import EducationFeatures from "../components/EducationFeatures";
 import CultivatingMinds from "../components/CultivatingMinds";
 import LatestNews from "../components/LatestNews";
 import Admissions from "../components/Admissions";
-// import Footer from "../components/layout/Footer";
+import Footer from "../layout/Footer";
  
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <CultivatingMinds />
       <LatestNews />
       <Admissions />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
