@@ -1,16 +1,15 @@
 import React from "react";
-import Logo from '../assets/logo-vasant-valley.svg'
+import Logo from "../assets/logo-vasant-valley.svg";
 
 const Navbar = () => {
-
-        const NAV_LINKS = [
-  { label: "HOME", active: true },
-  { label: "ABOUT" },
-  { label: "ACADEMICS" },
-  { label: "ADMISSIONS" },
-  { label: "NEWS & EVENTS" },
-  { label: "CONTACT" },
-];
+  const NAV_LINKS = [
+    { label: "HOME", active: true },
+    { label: "ABOUT" },
+    { label: "ACADEMICS" },
+    { label: "ADMISSIONS" },
+    { label: "NEWS & EVENTS" },
+    { label: "CONTACT" },
+  ];
   return (
     <>
       {/* Navbar */}
@@ -18,9 +17,11 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <div className="flex h-10 w-10 -rotate-45 items-center justify-center border border-amber-400/80">
-            
-               <img src={Logo} alt="Background image" className="h-10 w-10 rotate-45"/>
-            
+            <img
+              src={Logo}
+              alt="Background image"
+              className="h-10 w-10 rotate-45"
+            />
           </div>
           <span className="font-serif text-lg tracking-wide text-white">
             VASANT VALLEY
