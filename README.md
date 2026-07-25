@@ -1,16 +1,34 @@
-# React + Vite
+# Vasant Valley School – Website Redesign
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Full Name
+Sagar Shetty
 
-Currently, two official plugins are available:
+## Email Address
+shettysagar619@gmail.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## GitHub Username
+Sagarshetty9
 
-## React Compiler
+## Selected Website
+https://www.vasantvalley.org/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Live Demo Link
+https://dettroin-int-sagar-vasant-valley.vercel.app/
 
-## Expanding the ESLint configuration
+## Technologies Used
+- React.js
+- Vite
+- Tailwind CSS v4
+- Motion
+- Lucide React
+- React Icons
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Key Improvements Made
+- Redesigned the landing page with a modern and professional UI.
+- Improved overall user experience and visual hierarchy.
+- Built a fully responsive layout for desktop, tablet, and mobile devices.
+- Created reusable React components for better code organization.
+- Added smooth animations and interactive hover effects using Motion.
+- Redesigned the navigation bar, hero section, feature cards, news section, admissions section, and footer.
+- Used modern icons with Lucide React and React Icons.
+- Organized the project with a clean and scalable folder structure.
