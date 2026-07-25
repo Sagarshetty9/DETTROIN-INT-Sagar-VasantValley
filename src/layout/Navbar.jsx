@@ -1,54 +1,100 @@
 import React from "react";
-import Logo from "../assets/logo-vasant-valley.svg";
+import Logo from "../assets/logo/logo-vasant-valley.svg";
+import { motion } from "motion/react";
+
+const NAV_LINKS = [
+  { label: "HOME", active: true },
+  { label: "ABOUT" },
+  { label: "ACADEMICS" },
+  { label: "ADMISSIONS" },
+  { label: "NEWS & EVENTS" },
+  { label: "CONTACT" },
+];
 
 const Navbar = () => {
-  const NAV_LINKS = [
-    { label: "HOME", active: true },
-    { label: "ABOUT" },
-    { label: "ACADEMICS" },
-    { label: "ADMISSIONS" },
-    { label: "NEWS & EVENTS" },
-    { label: "CONTACT" },
-  ];
   return (
     <>
       {/* Navbar */}
-      <nav className="relative z-10 flex items-center justify-between px-8 md:px-14 py-6">
+      <motion.nav
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.7,
+          ease: "easeOut",
+        }}
+        className="relative z-10 flex items-center justify-between px-8 py-6 md:px-14"
+      >
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 -rotate-45 items-center justify-center border border-amber-400/80">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            delay: 0.2,
+            duration: 0.5,
+          }}
+          className="flex items-center gap-3"
+        >
+          <div className="flex h-15 w-15 items-center justify-center rounded-full bg-white backdrop-blur-sm">
             <img
               src={Logo}
-              alt="Background image"
-              className="h-10 w-10 rotate-45"
+              alt="Vasant valley Logo"
+              className="h-15 w-15 object-contain "
             />
           </div>
           <span className="font-serif text-lg tracking-wide text-white">
             VASANT VALLEY
           </span>
-        </div>
+        </motion.div>
 
         {/* Links */}
-        <ul className="hidden items-center gap-8 text-[13px] font-medium tracking-wider text-white/90 lg:flex">
-          {NAV_LINKS.map((link) => (
-            <li
-              key={link.label}
-              className={
-                link.active
-                  ? "cursor-pointer text-amber-400"
-                  : "cursor-pointer transition-colors hover:text-amber-400"
-              }
-            >
-              {link.label}
-            </li>
-          ))}
-        </ul>
+    <motion.ul
+  className="hidden items-center gap-8 lg:flex"
+>
+  {NAV_LINKS.map((link, index) => (
+    <motion.li
+      key={link.label}
+      initial={{ opacity: 0, y: -12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        delay: 0.35 + index * 0.08,
+        duration: 0.45,
+        ease: "easeOut",
+      }}
+      whileHover={{
+        y: -2,
+        transition: { duration: 0.2 },
+      }}
+      whileTap={{ scale: 0.96 }}
+      className={`group relative cursor-pointer text-[13px] font-medium tracking-wider transition-colors duration-300 ${
+        link.active
+          ? "text-amber-400"
+          : "text-white/90 hover:text-amber-400"
+      }`}
+    >
+      {link.label}
+
+      <span
+        className={`absolute -bottom-1 left-0 h-0.5 rounded-full bg-amber-400 transition-all duration-300 ${
+          link.active ? "w-full" : "w-0 group-hover:w-full"
+        }`}
+      />
+    </motion.li>
+  ))}
+</motion.ul>
 
         {/* CTA outline button */}
-        <button className="hidden h-10 w-28 rounded-sm border border-white/70 text-sm text-white/90 transition-colors hover:border-amber-400 hover:text-amber-400 md:block">
+        <motion.button
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            delay: 0.8,
+            duration: 0.5,
+          }}
+          className="hidden h-10 w-28 rounded-sm border border-white/70 text-sm text-white/90 transition-colors hover:border-amber-400 hover:text-amber-400 md:block"
+        >
           Enroll
-        </button>
-      </nav>
+        </motion.button>
+      </motion.nav>
     </>
   );
 };

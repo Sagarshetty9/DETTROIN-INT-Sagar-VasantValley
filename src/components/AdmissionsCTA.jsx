@@ -1,10 +1,14 @@
 import React from "react";
 import Button from "../ui/Button";
+import {motion} from 'motion/react'
 
-
-const Admissions = () => {
+const AdmissionsCTA = () => {
   return (
-     <section
+     <motion.section
+     initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6 }}
       className="px-6 py-24 text-center md:px-14"
       style={{
         background: "linear-gradient(135deg, #8a2418 0%, #5c1a10 100%)",
@@ -22,8 +26,8 @@ const Admissions = () => {
           Start Application
         </Button>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
-export default Admissions
+export default AdmissionsCTA

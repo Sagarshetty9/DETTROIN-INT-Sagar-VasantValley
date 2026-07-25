@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../layout/Navbar'
+import {motion} from "motion/react"
 
 const Hero = () => {
 
@@ -8,6 +9,10 @@ const Hero = () => {
   return (
     
       <section
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6 }}
       className="relative min-h-screen w-full overflow-hidden font-sans"
       style={{
         background:
@@ -21,7 +26,12 @@ const Hero = () => {
    
  
       {/* Hero content */}
-      <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 pt-20 pb-28 text-center md:pt-28">
+      <motion.div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 pt-20 pb-28 text-center md:pt-28"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6 }}
+      >
         <p className="mb-6 text-xs font-semibold tracking-[0.3em] text-amber-400 md:text-sm">
           VASANT VALLEY SCHOOL
         </p>
@@ -46,7 +56,7 @@ const Hero = () => {
             Discover Our School
           </button>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }
