@@ -4,7 +4,7 @@ import StatsBar from "../components/StatsBar";
 import EducationFeatures from "../components/EducationFeatures";
 import CultivatingMinds from "../components/CultivatingMinds";
 import LatestNews from "../components/LatestNews";
-// import AdmissionsCTA from "../components/AdmissionsCTA";
+import Admissions from "../components/Admissions";
 // import Footer from "../components/layout/Footer";
  
 export default function Home() {
@@ -15,8 +15,8 @@ export default function Home() {
       <EducationFeatures />
       <CultivatingMinds />
       <LatestNews />
-      {/* <AdmissionsCTA />
-      <Footer /> */}
+      <Admissions />
+      {/* <Footer /> */}
     </div>
   );
 }
